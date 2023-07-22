@@ -530,8 +530,8 @@ contract BasePair is IBasePair {
             // scope for reserve{0,1}Adjusted, avoids stack too deep errors
             (address _token0, address _token1) = (token0, token1);
 
-            if (amount0In > 0) _update0(amount0In / fee); // accrue fees for token0 and move them out of pool
-            if (amount1In > 0) _update1(amount1In / fee); // accrue fees for token1 and move them out of pool
+            if (amount0In / fee > 0) _update0(amount0In / fee); // accrue fees for token0 and move them out of pool
+            if (amount1In / fee > 0) _update1(amount1In / fee); // accrue fees for token1 and move them out of pool
 
             _balance0 = IERC20(_token0).balanceOf(address(this)); // since we removed tokens, we need to reconfirm balances, can also simply use previous balance - amountIn/ 10000, but doing balanceOf again as safety check
             _balance1 = IERC20(_token1).balanceOf(address(this));
@@ -782,14 +782,13 @@ contract BasePair is IBasePair {
 
     // set a new fee for the LP
     // 10 max fees for LPs (10%)
-    // 10000 min fees for LPs (0.01%)
     function setFee(uint256 _fee) external {
         require(
             msg.sender == BaseFactory(factory).feeAmountOwner() ||
                 msg.sender == BaseFactory(factory).admin(),
             "Pair: only factory's feeAmountOwner or admin"
         );
-        require(_fee >= 10 && _fee <= 1000, "!range");
+        require(_fee >= 10, "!range");
         fee = _fee;
         emit SetFee(fee);
     }
