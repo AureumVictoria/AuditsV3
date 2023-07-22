@@ -21,7 +21,7 @@ contract BaseFactory is IBaseFactory {
     address public admin;
     address public feeAmountOwner;
 
-    uint256 public baseStableFee = 2500; // 0.04%
+    uint256 public baseStableFee = 10000000; // 0.0001%
     uint256 public baseVariableFee = 333; // 0.3%
 
     mapping(address => mapping(address => mapping(bool => address)))
@@ -61,10 +61,9 @@ contract BaseFactory is IBaseFactory {
 
     // set the fee for all new stable-LPs
     // 10 max fees for LPs (10%)
-    // 10000 min fees for LPs (0.01%)
     function setBaseStableFee(uint256 _fee) external {
         require(msg.sender == owner);
-        require(_fee >= 10 && _fee <= 1000, "!range");
+        require(_fee >= 10, "!range");
         baseStableFee = _fee;
 
         emit SetBaseStableFee(_fee);
@@ -72,10 +71,9 @@ contract BaseFactory is IBaseFactory {
 
     // set the fee for all new variable-LPs
     // 10 max fees for LPs (10%)
-    // 10000 min fees for LPs (0.01%)
     function setBaseVariableFee(uint256 _fee) external {
         require(msg.sender == owner);
-        require(_fee >= 10 && _fee <= 1000, "!range");
+        require(_fee >= 10, "!range");
         baseVariableFee = _fee;
 
         emit SetBaseVariableFee(_fee);
