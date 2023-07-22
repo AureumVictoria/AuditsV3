@@ -782,13 +782,14 @@ contract BasePair is IBasePair {
 
     // set a new fee for the LP
     // 10 max fees for LPs (10%)
+    // 10000 min fees for LPs (0.01%)
     function setFee(uint256 _fee) external {
         require(
             msg.sender == BaseFactory(factory).feeAmountOwner() ||
                 msg.sender == BaseFactory(factory).admin(),
             "Pair: only factory's feeAmountOwner or admin"
         );
-        require(_fee >= 10, "!range");
+        require(_fee >= 10 && _fee <= 1000, "!range");
         fee = _fee;
         emit SetFee(fee);
     }
