@@ -127,7 +127,7 @@ contract Bribe is IBribe, ReentrancyGuard {
 
         // if user first time then set it to first bribe
         if (_userLastTime == 0) {
-            _userLastTime = userFirstDeposit[_voter];
+            _userLastTime = userFirstDeposit[_voter] - 1;
         }
 
         for (k; k < 50; k++) {
