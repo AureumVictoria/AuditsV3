@@ -1133,7 +1133,7 @@ describe("AMM Testing", function () {
         console.log();
         const beforeFeeUpdate = await pairFactory.baseStableFee();
         console.log('Before variable fee updated: ', beforeFeeUpdate);
-        expect(Number(await pairFactory.baseStableFee())).to.be.equal(Number(2500));
+        expect(Number(await pairFactory.baseStableFee())).to.be.equal(Number(10000000));
         await pairFactory.setBaseStableFee(1000);
         console.log('After variable fee updated: ', await pairFactory.baseStableFee());
         expect(Number(await pairFactory.baseStableFee())).to.be.lessThan(Number(beforeFeeUpdate));
@@ -1142,7 +1142,7 @@ describe("AMM Testing", function () {
         const beforeFeeUpdatesLP1 = await sLP1.fee();
         console.log('vLP1 Before variable fee updated: ', beforeFeeUpdatesLP1);
 
-        expect(Number(await sLP1.fee())).to.be.equal(Number(2500));
+        expect(Number(await sLP1.fee())).to.be.equal(Number(10000000));
         await sLP1.connect(user1).setFee(1000);
 
         const afterFeeUpdatesLP1 = await sLP1.fee();
