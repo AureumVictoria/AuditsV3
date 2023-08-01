@@ -1641,7 +1641,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap1WETH = await WETH.balanceOf(owner.address);
         let bevorSwap1TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 9999999999999);
         let afterSwap1WETH = await WETH.balanceOf(owner.address);
         let afterSwap1TK1 = await TK1.balanceOf(owner.address);
         expect(divDec(bevorSwap1WETH)).to.be.greaterThan(divDec(afterSwap1WETH));
@@ -1650,7 +1650,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap2TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap2WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 9999999999999);
         let afterSwap2TK1 = await TK1.balanceOf(owner.address);
         let afterSwap2WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap2TK1)).to.be.greaterThan(divDec(afterSwap2TK1));
@@ -1659,7 +1659,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap3WETH = await WETH.balanceOf(owner.address);
         let bevorSwap3TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 9999999999999);
         let afterSwap3TK1 = await TK1.balanceOf(owner.address);
         let afterSwap3WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap3WETH)).to.be.greaterThan(divDec(afterSwap3WETH));
@@ -1668,7 +1668,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap4TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap4WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 9999999999999);
         let afterSwap4TK1 = await TK1.balanceOf(owner.address);
         let afterSwap4WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap4TK1)).to.be.greaterThan(divDec(afterSwap4TK1));
@@ -1677,7 +1677,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap5WETH = await WETH.balanceOf(owner.address);
         let bevorSwap5TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 9999999999999);
         let afterSwap5TK1 = await TK1.balanceOf(owner.address);
         let afterSwap5WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap5WETH)).to.be.greaterThan(divDec(afterSwap5WETH));
@@ -1686,7 +1686,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap6TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap6WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 9999999999999);
         let afterSwap6TK1 = await TK1.balanceOf(owner.address);
         let afterSwap6WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap6TK1)).to.be.greaterThan(divDec(afterSwap6TK1));
@@ -1695,7 +1695,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap7WETH = await WETH.balanceOf(owner.address);
         let bevorSwap7TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 9999999999999);
         let afterSwap7TK1 = await TK1.balanceOf(owner.address);
         let afterSwap7WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap7WETH)).to.be.greaterThan(divDec(afterSwap7WETH));
@@ -1704,7 +1704,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap8TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap8WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 9999999999999);
         let afterSwap8TK1 = await TK1.balanceOf(owner.address);
         let afterSwap8WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap8TK1)).to.be.greaterThan(divDec(afterSwap8TK1));
@@ -1713,7 +1713,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap9WETH = await WETH.balanceOf(owner.address);
         let bevorSwap9TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap9TK1 = await TK1.balanceOf(owner.address);
         let afterSwap9WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap9WETH)).to.be.greaterThan(divDec(afterSwap9WETH));
@@ -1722,7 +1722,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap10TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap10WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 999999999999999);
         let afterSwap10TK1 = await TK1.balanceOf(owner.address);
         let afterSwap10WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap10TK1)).to.be.greaterThan(divDec(afterSwap10TK1));
@@ -2194,7 +2194,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap1WETH = await WETH.balanceOf(owner.address);
         let bevorSwap1TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap1WETH = await WETH.balanceOf(owner.address);
         let afterSwap1TK1 = await TK1.balanceOf(owner.address);
         expect(divDec(bevorSwap1WETH)).to.be.greaterThan(divDec(afterSwap1WETH));
@@ -2203,7 +2203,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap2TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap2WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 999999999999999);
         let afterSwap2TK1 = await TK1.balanceOf(owner.address);
         let afterSwap2WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap2TK1)).to.be.greaterThan(divDec(afterSwap2TK1));
@@ -2212,7 +2212,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap3WETH = await WETH.balanceOf(owner.address);
         let bevorSwap3TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap3TK1 = await TK1.balanceOf(owner.address);
         let afterSwap3WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap3WETH)).to.be.greaterThan(divDec(afterSwap3WETH));
@@ -2221,7 +2221,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap4TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap4WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 999999999999999);
         let afterSwap4TK1 = await TK1.balanceOf(owner.address);
         let afterSwap4WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap4TK1)).to.be.greaterThan(divDec(afterSwap4TK1));
@@ -2230,7 +2230,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap5WETH = await WETH.balanceOf(owner.address);
         let bevorSwap5TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap5TK1 = await TK1.balanceOf(owner.address);
         let afterSwap5WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap5WETH)).to.be.greaterThan(divDec(afterSwap5WETH));
@@ -2239,7 +2239,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap6TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap6WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 999999999999999);
         let afterSwap6TK1 = await TK1.balanceOf(owner.address);
         let afterSwap6WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap6TK1)).to.be.greaterThan(divDec(afterSwap6TK1));
@@ -2248,7 +2248,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap7WETH = await WETH.balanceOf(owner.address);
         let bevorSwap7TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap7TK1 = await TK1.balanceOf(owner.address);
         let afterSwap7WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap7WETH)).to.be.greaterThan(divDec(afterSwap7WETH));
@@ -2257,7 +2257,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap8TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap8WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 999999999999999);
         let afterSwap8TK1 = await TK1.balanceOf(owner.address);
         let afterSwap8WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap8TK1)).to.be.greaterThan(divDec(afterSwap8TK1));
@@ -2266,7 +2266,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap9WETH = await WETH.balanceOf(owner.address);
         let bevorSwap9TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap9TK1 = await TK1.balanceOf(owner.address);
         let afterSwap9WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap9WETH)).to.be.greaterThan(divDec(afterSwap9WETH));
@@ -2275,7 +2275,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap10TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap10WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 999999999999999);
         let afterSwap10TK1 = await TK1.balanceOf(owner.address);
         let afterSwap10WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap10TK1)).to.be.greaterThan(divDec(afterSwap10TK1));
@@ -2746,16 +2746,16 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap1WETH = await WETH.balanceOf(owner.address);
         let bevorSwap1TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap1WETH = await WETH.balanceOf(owner.address);
         let afterSwap1TK1 = await TK1.balanceOf(owner.address);
         expect(divDec(bevorSwap1WETH)).to.be.greaterThan(divDec(afterSwap1WETH));
         expect(divDec(bevorSwap1TK1)).to.be.lessThan(divDec(afterSwap1TK1));
-        
+
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap2TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap2WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 999999999999999);
         let afterSwap2TK1 = await TK1.balanceOf(owner.address);
         let afterSwap2WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap2TK1)).to.be.greaterThan(divDec(afterSwap2TK1));
@@ -2764,7 +2764,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap3WETH = await WETH.balanceOf(owner.address);
         let bevorSwap3TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap3TK1 = await TK1.balanceOf(owner.address);
         let afterSwap3WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap3WETH)).to.be.greaterThan(divDec(afterSwap3WETH));
@@ -2773,7 +2773,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap4TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap4WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 999999999999999);
         let afterSwap4TK1 = await TK1.balanceOf(owner.address);
         let afterSwap4WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap4TK1)).to.be.greaterThan(divDec(afterSwap4TK1));
@@ -2782,7 +2782,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap5WETH = await WETH.balanceOf(owner.address);
         let bevorSwap5TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap5TK1 = await TK1.balanceOf(owner.address);
         let afterSwap5WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap5WETH)).to.be.greaterThan(divDec(afterSwap5WETH));
@@ -2791,7 +2791,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap6TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap6WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 999999999999999);
         let afterSwap6TK1 = await TK1.balanceOf(owner.address);
         let afterSwap6WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap6TK1)).to.be.greaterThan(divDec(afterSwap6TK1));
@@ -2800,7 +2800,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap7WETH = await WETH.balanceOf(owner.address);
         let bevorSwap7TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap7TK1 = await TK1.balanceOf(owner.address);
         let afterSwap7WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap7WETH)).to.be.greaterThan(divDec(afterSwap7WETH));
@@ -2809,7 +2809,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap8TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap8WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 999999999999999);
         let afterSwap8TK1 = await TK1.balanceOf(owner.address);
         let afterSwap8WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap8TK1)).to.be.greaterThan(divDec(afterSwap8TK1));
@@ -2818,7 +2818,7 @@ describe("Sytem Test", function () {
         await WETH.connect(owner).approve(router.address, fifty);
         let bevorSwap9WETH = await WETH.balanceOf(owner.address);
         let bevorSwap9TK1 = await TK1.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, WETH.address, TK1.address, false, owner.address, 999999999999999);
         let afterSwap9TK1 = await TK1.balanceOf(owner.address);
         let afterSwap9WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap9WETH)).to.be.greaterThan(divDec(afterSwap9WETH));
@@ -2827,7 +2827,7 @@ describe("Sytem Test", function () {
         await TK1.connect(owner).approve(router.address, fifty);
         let bevorSwap10TK1 = await TK1.balanceOf(owner.address);
         let bevorSwap10WETH = await WETH.balanceOf(owner.address);
-        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 1685083888);
+        await router.connect(owner).swapExactTokensForTokensSimple(fifty, 0, TK1.address, WETH.address, false, owner.address, 9999999999999);
         let afterSwap10TK1 = await TK1.balanceOf(owner.address);
         let afterSwap10WETH = await WETH.balanceOf(owner.address);
         expect(divDec(bevorSwap10TK1)).to.be.greaterThan(divDec(afterSwap10TK1));
