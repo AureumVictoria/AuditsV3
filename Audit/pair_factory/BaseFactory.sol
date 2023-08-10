@@ -21,7 +21,7 @@ contract BaseFactory is IBaseFactory {
     address public admin;
     address public feeAmountOwner;
 
-    uint256 public baseStableFee = 10000000; // 0.0001%
+    uint256 public baseStableFee = 10000000; // 0.00001%
     uint256 public baseVariableFee = 333; // 0.3%
 
     mapping(address => mapping(address => mapping(bool => address)))
