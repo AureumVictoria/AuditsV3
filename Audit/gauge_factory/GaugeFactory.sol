@@ -108,7 +108,7 @@ contract GaugeFactory is IGaugeFactory, ProtocolGovernance, ReentrancyGuard {
             (msg.sender == governance ||
                 msg.sender == admin ||
                 msg.sender == voter),
-            "!gov or !admin"
+            "!gov and !admin"
         );
         _reset(_user);
     }
@@ -144,7 +144,7 @@ contract GaugeFactory is IGaugeFactory, ProtocolGovernance, ReentrancyGuard {
                 msg.sender == governance ||
                 msg.sender == admin ||
                 msg.sender == voter),
-            "!gov or !admin"
+            "!gov and !admin"
         );
 
         address[] memory _tokenVote = tokenVote[_owner];
@@ -209,7 +209,7 @@ contract GaugeFactory is IGaugeFactory, ProtocolGovernance, ReentrancyGuard {
             (msg.sender == governance ||
                 msg.sender == admin ||
                 msg.sender == voter),
-            "!gov or !admin"
+            "!gov and !admin"
         );
         require(_tokenVote.length == _weights.length);
         lastVote[_user] = epoch;
@@ -226,7 +226,7 @@ contract GaugeFactory is IGaugeFactory, ProtocolGovernance, ReentrancyGuard {
         require(_maxVotesToken <= divisor, "more then 100%");
         require(
             msg.sender == governance || msg.sender == admin,
-            "!gov or !admin"
+            "!gov and !admin"
         );
         (address _token0, address _token1) = IBasePair(_tokenLP).tokens();
 
@@ -253,7 +253,7 @@ contract GaugeFactory is IGaugeFactory, ProtocolGovernance, ReentrancyGuard {
     function deprecateGauge(address _token) external {
         require(
             (msg.sender == governance || msg.sender == admin),
-            "!gov or !admin"
+            "!gov and !admin"
         );
         require(gauges[_token] != address(0x0), "does not exist");
         require(gaugeStatus[_token], "gauge is not active");
@@ -265,7 +265,7 @@ contract GaugeFactory is IGaugeFactory, ProtocolGovernance, ReentrancyGuard {
     function resurrectGauge(address _token) external {
         require(
             (msg.sender == governance || msg.sender == admin),
-            "!gov or !admin"
+            "!gov and !admin"
         );
         require(gauges[_token] != address(0x0), "does not exist");
         require(!gaugeStatus[_token], "gauge is active");
@@ -347,7 +347,7 @@ contract GaugeFactory is IGaugeFactory, ProtocolGovernance, ReentrancyGuard {
     function updateVeProxy(address _veProxy) public {
         require(
             (msg.sender == governance || msg.sender == admin),
-            "!gov or !admin"
+            "!gov and !admin"
         );
         veProxy = IERC20(_veProxy);
 
@@ -360,7 +360,7 @@ contract GaugeFactory is IGaugeFactory, ProtocolGovernance, ReentrancyGuard {
             (msg.sender == governance ||
                 msg.sender == admin ||
                 msg.sender == voter),
-            "!gov or !admin"
+            "!gov and !admin"
         );
         pokeDelay = _pokeDelay;
 
@@ -373,7 +373,7 @@ contract GaugeFactory is IGaugeFactory, ProtocolGovernance, ReentrancyGuard {
             (msg.sender == governance ||
                 msg.sender == admin ||
                 msg.sender == voter),
-            "!gov or !admin"
+            "!gov and !admin"
         );
         require(_maxVotesToken <= divisor, "more then 100%");
         maxVotesToken[_tokens[ID]] = _maxVotesToken;
