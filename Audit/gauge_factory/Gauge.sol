@@ -298,7 +298,7 @@ contract Gauge is IGauge, ReentrancyGuard {
         updateReward(address(0))
     {
         if (derivedSupply != 0) {
-        STABLE.safeTransferFrom(gaugeFactory, address(this), reward);
+            STABLE.safeTransferFrom(gaugeFactory, address(this), reward);
             if (block.timestamp >= periodFinish) {
                 rewardRate = reward / DURATION;
             } else {
@@ -356,7 +356,7 @@ contract Gauge is IGauge, ReentrancyGuard {
     // Set whitelist for other receiver
     function setWhitelisted(address _receiver, bool _whitelist) public {
         whitelisted[msg.sender][_receiver] = _whitelist;
-        emit Whitelisted(msg.sender, _receiver);
+        emit Whitelisted(msg.sender, _receiver, _whitelist);
     }
 
     event RewardAdded(uint256 reward);
@@ -373,7 +373,7 @@ contract Gauge is IGauge, ReentrancyGuard {
         uint256 claimed0,
         uint256 claimed1
     );
-    event Whitelisted(address user, address whitelistedUser);
+    event Whitelisted(address user, address whitelistedUser, bool whitelist);
     event UpdateReferral(
         address referralContract,
         uint256 referralFee,
