@@ -77,7 +77,7 @@ contract ProtocolGovernance is IProtocolGovernance {
     ) public {
         require(
             (msg.sender == governance || msg.sender == admin),
-            "!gov or !admin"
+            "!gov and !admin"
         );
         require((_baseReferralFee <= 10000), "must be lower 10%");
         baseReferralsContract = _referralsContract;
