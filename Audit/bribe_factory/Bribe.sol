@@ -399,7 +399,7 @@ contract Bribe is IBribe, ReentrancyGuard {
     // Set whitelist for other receiver in getRewardForOwnerToOtherOwner
     function setWhitelisted(address _receiver, bool _whitlist) public {
         whitelisted[msg.sender][_receiver] = _whitlist;
-        emit Whitelisted(msg.sender, _receiver);
+        emit Whitelisted(msg.sender, _receiver, _whitlist);
     }
 
     /* ========== RESTRICTED FUNCTIONS ========== */
@@ -478,7 +478,7 @@ contract Bribe is IBribe, ReentrancyGuard {
         uint256 reward
     );
     event AddRewardtoken(address token);
-    event Whitelisted(address user, address whitelistedUser);
+    event Whitelisted(address user, address whitelistedUser, bool whitelisted);
     event UpdateReferral(
         address referralContract,
         uint256 referralFee,
